@@ -1,0 +1,51 @@
+// firstReverse
+// 문제
+// 문자열을 입력받아 순서가 뒤집힌 문자열을 리턴해야 합니다.
+
+// 입력
+// 인자 1 : str
+// string 타입의 문자열
+// 출력
+// string 타입을 리턴해야 합니다.
+// 입출력 예시
+// 1
+// 2
+// 3
+// 4
+// 5
+// let output = firstReverse('codestates');
+// console.log(output); // "setatsedoc"
+
+// output = firstReverse('I love codestates');
+// console.log(output); // "setatsedoc evol I"
+// 힌트
+// 배열은 arr.reverse를 통해 쉽게 뒤집을 수 있습니다.
+
+
+
+function firstReverse(str) {
+  if(str.length===0){
+    return ""
+  }
+  let aa =  str[str.length-1];
+for(let i = 1; i<str.length; i++){
+  aa = aa + str[str.length-1-i]
+}return aa
+// TODO: 여기에 코드를 작성합니다.
+}
+//수도코드
+// str이 빈 문자열 일 때는 빈 문자열을 리턴
+// 새로운 문자열을 할당할 aa 변수를 선언한다.
+// aa에 str의 끝 문자가 첫번째 문자열로 들어간다.
+// str을 문자열의 길이만큼 반복 루프 돌면서
+// 문자열 끝에서 i번째를 뺀 인덱스 값의 문자를 aa에 계속 할당한다.
+
+//다른 방법 
+//   function firstReverse(str) {
+//   return str.split('').reverse().join('');
+// }
+
+// 수도코드
+// 문자열을 배열화 시켜준다.
+// reverse() 메서드로 순서를 뒤집어준다.
+// 다시 문자열화 시킨다.
